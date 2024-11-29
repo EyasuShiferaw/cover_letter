@@ -3,9 +3,7 @@ import logging
 from pathlib import Path
 from para2pdf import save_to_pdf
 from generate_cover_letter import CoverLetterGenerator
-from dotenv import load_dotenv
 
-load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -57,8 +55,6 @@ def main():
     output_file = output_dir / 'result.pdf'
 
     save_to_pdf(cover_letter, output_file, applicant_name, applicant_phone, applicant_email)
-    # with open(output_file, 'w') as f:
-    #     f.write(cover_letter)
     
 
 if __name__ == "__main__":
