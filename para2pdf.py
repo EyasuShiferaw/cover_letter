@@ -30,10 +30,10 @@ def random_salutation() -> str:
 
 def save_to_pdf(
        test:str,
-       filename:str =" cover1_letter.pdf",
-       applicant_name:str = "Your Name",
-       applicant_phone:str = "555-123-4567",
-       applicant_email:str = "your.email@example.com",
+       filename:str,
+       applicant_name:str,
+       applicant_phone:str,
+       applicant_email:str,
       
       ):
     """
