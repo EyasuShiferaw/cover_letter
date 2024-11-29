@@ -19,10 +19,9 @@ def main():
     applicant_phone:str = os.environ.get('applicant_phone', 'default_value')
     company_name = os.environ.get('company_name', 'default_value')
     job_description = os.environ.get('job_description', 'default_value')
-    
-    # resume_path = "cv.pdf"
+    resume_path = "cv.pdf"
 
-    resume_path = os.environ.get('resume_path', 'default_value')
+    # resume_path = os.environ.get('resume_path', 'default_value')
     
    
 
