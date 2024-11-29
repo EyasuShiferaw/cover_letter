@@ -78,4 +78,4 @@ local_settings.py
 .env.secret
 
 .env
-
+*.pdf
