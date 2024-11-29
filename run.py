@@ -3,8 +3,9 @@ import logging
 from pathlib import Path
 from para2pdf import save_to_pdf
 from generate_cover_letter import CoverLetterGenerator
+from dotenv import load_dotenv
 
-
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -13,10 +14,16 @@ logger = logging.getLogger(__name__)
 
 def main():
 
+    applicant_name:str = os.environ.get('applicant_name', 'default_value')
+    applicant_email:str = os.environ.get('applicant_email', 'default_value')
+    applicant_phone:str = os.environ.get('applicant_phone', 'default_value')
     company_name = os.environ.get('company_name', 'default_value')
     job_description = os.environ.get('job_description', 'default_value')
-    # resume_path = os.environ.get('resume_path', 'default_value')
-    resume_path = "cv.pdf"
+    
+    # resume_path = "cv.pdf"
+
+    resume_path = os.environ.get('resume_path', 'default_value')
+    
    
 
     logger.info(f"resume_path: {resume_path}")
@@ -48,11 +55,11 @@ def main():
     output_dir.mkdir(exist_ok=True)  # Create 'output' directory if it doesn't exist
 
     # Define the file path within the 'output' directory
-    output_file = output_dir / 'result.txt'
+    output_file = output_dir / 'result.pdf'
 
-    save_to_pdf(cover_letter)
-    with open(output_file, 'w') as f:
-        f.write(cover_letter)
+    save_to_pdf(cover_letter, output_file, applicant_name, applicant_phone, applicant_email)
+    # with open(output_file, 'w') as f:
+    #     f.write(cover_letter)
     
 
 if __name__ == "__main__":
