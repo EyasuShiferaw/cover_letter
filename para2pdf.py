@@ -59,7 +59,7 @@ def save_to_pdf(
     heading_style = styles["Heading2"]
     heading_style.fontName = "Times-Bold"   # Use Times-Bold for headings
 
-    c = canvas.Canvas(filename, pagesize=letter)
+    c = canvas.Canvas(str(filename), pagesize=letter)
 
     # Get the page dimensions
     page_width, page_height = letter  # letter is a tuple (width, height)
@@ -102,6 +102,7 @@ def save_to_pdf(
         w, h = element.wrap(usable_width, page_height)
         element.drawOn(c, left_margin, flowable_y - h)
         flowable_y -= h + 6  # 6 points space between elements.
+        
 
     c.save()
     logger.info(f"saved to pdf")
