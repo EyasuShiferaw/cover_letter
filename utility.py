@@ -120,3 +120,4 @@ def resume_pipeline(resume_path: str) -> str:
         return None
     return summary
 
+
