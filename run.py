@@ -1,7 +1,9 @@
 import os
 import logging
 from pathlib import Path
+from para2pdf import save_to_pdf
 from generate_cover_letter import CoverLetterGenerator
+
 
 
 # Configure logging
@@ -48,6 +50,7 @@ def main():
     # Define the file path within the 'output' directory
     output_file = output_dir / 'result.txt'
 
+    save_to_pdf(cover_letter)
     with open(output_file, 'w') as f:
         f.write(cover_letter)
     
