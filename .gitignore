@@ -79,4 +79,4 @@ local_settings.py
 
 .env
 *.pdf
-./output/*
+/output/*
