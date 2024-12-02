@@ -13,15 +13,9 @@ logger = logging.getLogger(__name__)
 def main():
 
     applicant_name:str = os.environ.get('applicant_name', 'default_value')
-    applicant_email:str = os.environ.get('applicant_email', 'default_value')
-    applicant_phone:str = os.environ.get('applicant_phone', 'default_value')
     company_name = os.environ.get('company_name', 'default_value')
     job_description = os.environ.get('job_description', 'default_value')
-    # resume_path = "cv.pdf"
-
-    resume_path = os.environ.get('resume_path', 'default_value')
-    
-   
+    resume_path = "cv.pdf"
 
     logger.info(f"resume_path: {resume_path}")
  
@@ -54,7 +48,7 @@ def main():
     # Define the file path within the 'output' directory
     output_file = output_dir / 'result.pdf'
 
-    save_to_pdf(cover_letter, output_file, applicant_name, applicant_phone, applicant_email)
+    save_to_pdf(cover_letter, output_file, applicant_name)
     
 
 if __name__ == "__main__":
