@@ -3,29 +3,84 @@ system_prompt = """
 You are a Precision Prose Coach, an expert in crafting concise and impactful cover letters tailored to job descriptions and resumes. Your task is to generate highly customized, cover letters that align the candidate’s skills and experiences with the job requirements while reflecting the company’s values and mission.  
 """
 
+# coverletter_template = """
+# Compose a brief and impactful cover letter based on the provided job description and resume. The letter should be no longer than three paragraphs and should be written in a professional, yet conversational tone. Avoid using any placeholders, and ensure that the letter flows naturally and is tailored to the job.
+
+# Analyze the job description to identify key qualifications and requirements. Introduce the candidate succinctly, aligning their career objectives with the role. Highlight relevant skills and experiences from the resume that directly match the job’s demands, using specific examples to illustrate these qualifications. Reference notable aspects of the company, such as its mission or values, that resonate with the candidate’s professional goals. Conclude with a strong statement of why the candidate is a good fit for the position, expressing a desire to discuss further.
+
+# Please write the cover letter in a way that directly addresses the job role and the company’s characteristics, ensuring it remains concise and engaging without unnecessary embellishments. The letter should be formatted into paragraphs and should not include a greeting or signature.
+
+# ## Rules:
+# - Provide only the text of the cover letter.
+# - Do not include any introductions, explanations, or additional information.
+# - The letter should be formatted into paragraph.
+
+# ## Company Name:
+# {company}
+
+# ## Job Description:
+# ```
+# {job_description}
+# ```
+# ## My resume:
+# ```
+# {resume}
+# ```
+# """
+
+
+
 coverletter_template = """
-Compose a brief and impactful cover letter based on the provided job description and resume. The letter should be no longer than three paragraphs and should be written in a professional, yet conversational tone. Avoid using any placeholders, and ensure that the letter flows naturally and is tailored to the job.
+Objective: Generate a Tailored, Impactful First-Person Cover Letter
 
-Analyze the job description to identify key qualifications and requirements. Introduce the candidate succinctly, aligning their career objectives with the role. Highlight relevant skills and experiences from the resume that directly match the job’s demands, using specific examples to illustrate these qualifications. Reference notable aspects of the company, such as its mission or values, that resonate with the candidate’s professional goals. Conclude with a strong statement of why the candidate is a good fit for the position, expressing a desire to discuss further.
+First-Person Writing Requirements:
+- ALWAYS write in first-person perspective ("I", "my")
+- Candidate must speak directly about their own experiences
+- Use personal pronouns consistently throughout the letter
 
-Please write the cover letter in a way that directly addresses the job role and the company’s characteristics, ensuring it remains concise and engaging without unnecessary embellishments. The letter should be formatted into paragraphs and should not include a greeting or signature.
+Key Principles:
+- Create a concise, powerful 3-paragraph cover letter
+- Directly align MY skills with job requirements
+- Demonstrate personal understanding of role and company
 
-## Rules:
-- Provide only the text of the cover letter.
-- Do not include any introductions, explanations, or additional information.
-- The letter should be formatted into paragraph.
+Letter Construction Guidelines:
+- Length: 250-350 words
+- Tone: Professional first-person narrative
+- Use "I" to personalize every skill and achievement
+- Avoid third-person references to the candidate
+
+Narrative Structure:
+1. First Paragraph: 
+   - Introduce MYSELF
+   - Use "I am" statements
+   - Connect personal career goals to the role
+
+2. Second Paragraph:
+   - Describe MY specific skills
+   - Use "I have" and "I've" to highlight achievements
+   - Provide direct, personal examples
+
+3. Third Paragraph:
+   - Express MY enthusiasm
+   - Use "I'm excited" or "I'm passionate"
+   - Demonstrate forward-looking commitment
+
+Critical First-Person Checklist:
+- Every paragraph must contain multiple first-person pronouns
+- Avoid passive voice
+- Speak directly and personally about capabilities
+- Ensure authentic, personal tone
+- Avoid using any placeholders, and ensure that the letter flows naturally and is tailored to the job.
+- The letter should be formatted into paragraphs and should not include a greeting or signature.
 
 ## Company Name:
 {company}
 
 ## Job Description:
-```
 {job_description}
-```
-## My resume:
-```
+
+## Candidate Resume:
 {resume}
-```
 """
 
 
