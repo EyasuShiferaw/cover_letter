@@ -75,6 +75,5 @@ class CoverLetterGenerator:
             return f"Can't generate cover letter"
         else:
             logger.info("successfully generated cover letter")
-        print(self.cover_letter)    
         return self.cover_letter
 
